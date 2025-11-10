@@ -1,0 +1,272 @@
+---
+title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
+description: "Meta description for the page"
+permalink: "/"
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Critical styles are loaded first -->
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css"/>
+    {% endif %}
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    <!-- {% include "components/home-schema.html" %} -->
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-998">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Welcome to</span>
+            <!--Logo-->
+            <picture class="cs-logo">
+                <source media="(max-width: 600px)" srcset="/assets/images/the-corner-hero.png">
+                <source media="(min-width: 601px)" srcset="/assets/images/the-corner-hero.png">
+                <img decoding="async" src="/assets/images/the-corner-hero.png" alt="Stitch House Restaurant" width="1200" height="630">
+                </picture>
+                <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                </p>
+                <a href="" class="cs-button-solid">Reserve Your Table</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <!--Image is also set as background image in CSS at 1400px for parallax effect-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg">
+        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg" alt="logo" width="1920" height="1000">
+        </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                 Services                     -->
+<!-- ============================================ -->
+
+<section id="services-1032">
+    <div class="cs-container">
+        <div class="cs-content">
+            <img class="cs-graphic" aria-hidden="true" loading="lazy" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Ornament.svg" decoding="async" alt="graphic" width="456" height="31">
+            <h2 class="cs-title">Best Menu Selection</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+        </div>
+        <div class="cs-card-group">
+            <picture class="cs-image cs-grid-item cs-item1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_3561.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_3561.jpeg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_3561.jpeg" alt="cafe" width="480" height="856">
+            </picture>
+            <div class="cs-card cs-grid-item cs-item2">
+                <picture class="cs-image">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/menu/crepe-3.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/menu/crepe-3.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/menu/crepe-3.jpg" alt="cafe" width="480" height="428">
+                </picture>
+                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/decal.svg" alt="icon" width="50" height="32">
+                <h3 class="cs-h3">
+                    Crepes
+                    <span class="cs-color">To Die For</span>
+                </h3>
+                <p class="cs-card-text">
+                    Lorem ipsum dolor sit amet.
+                </p>
+                <a href="" class="cs-link">Order Now</a>
+            </div>
+            <picture class="cs-image cs-grid-item cs-item3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/menu/crepe-4.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/menu/crepe-4.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/menu/crepe-4.jpg" alt="cafe" width="480" height="428">
+            </picture>
+            <picture class="cs-image cs-grid-item cs-item4">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/menu/cocktail-2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/menu/cocktail-2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/menu/cocktail-2.jpg" alt="cafe" width="480" height="428">
+            </picture>
+            <div class="cs-card cs-grid-item cs-item5">
+                <picture class="cs-image">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/menu/cocktail-3.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/menu/cocktail-3.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/menu/cocktail-3.jpg" alt="cafe" width="480" height="428">
+                </picture>
+                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/decal.svg" alt="icon" width="50" height="32">
+                <h3 class="cs-h3">
+                    <span class="cs-color">All Day</span>
+                    Cocktails
+                </h3>
+                <p class="cs-card-text">
+                    Lorem ipsum dolor sit amet.
+                </p>
+                <a href="" class="cs-link">Order Now</a>
+            </div>
+            <picture class="cs-image cs-grid-item cs-item6">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_3524.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_3524.jpeg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_3524.jpeg" alt="cafe" width="480" height="856">
+            </picture>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Meet The Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-us-1020">
+    <div class="cs-container">
+        <div class="cs-content">
+            <img class="cs-graphic" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Ornament.svg" alt="chef" width="456" height="31">
+            <h2 class="cs-title">Meet Our Team</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/chef1.jpg">
+                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/chef1.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/chef1.jpg" alt="chef" width="305" height="335">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Lisa Everett </span>
+                    <span class="cs-job">Founder/Owner</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/chef2.jpg">
+                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/chef2.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/chef2.jpg" alt="chef" width="305" height="335">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">John Doe</span>
+                    <span class="cs-job">Head Chef</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 767px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/chef3.jpg">
+                    <source media="(min-width: 768px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/chef3.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/chef3.jpg" alt="chef" width="305" height="335">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Jane Doe</span>
+                    <span class="cs-job">Operations Manager</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+                       
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<section id="stats-1023">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Stats</span>
+            <h2 class="cs-title">Stats to be Proud of</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-number">6+</span>
+                <span class="cs-desc">Years in Business</span>
+            </li>
+            <li class="cs-item">
+                <span class="cs-number">57</span>
+                <span class="cs-desc">Unique Options</span>
+            </li>
+            <li class="cs-item">
+                <span class="cs-number">4.9</span>
+                <span class="cs-desc">Average Rating</span>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-263">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Reviews</span>
+            <h2 class="cs-title">Testimonials</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum repellendus perspiciatis nostrum nisi possimus corrupti, temporibus totam reiciendis nobis quasi. Id, ea beatae! Veritatis!
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote.svg" alt="quote icon" width="30" height="24" loading="lazy" decoding="async">
+                <p class="cs-item-text">
+                    Perfect! All staff are very professional and friendly! They offered great explanations and helped me to get back out into the country.
+                </p>
+                <span class="cs-name">- John Doe</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote.svg" alt="quote icon" width="30" height="24" loading="lazy" decoding="async">
+                <p class="cs-item-text">
+                    Perfect! All staff are very professional and friendly! They offered great explanations and helped me to get back out into the country.
+                </p>
+                <span class="cs-name">- John Doe</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote.svg" alt="quote icon" width="30" height="24" loading="lazy" decoding="async">
+                <p class="cs-item-text">
+                    Perfect! All staff are very professional and friendly! They offered great explanations and helped me to get back out into the country.
+                </p>
+                <span class="cs-name">- John Doe</span>
+            </li>
+        </ul>
+    </div>
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Reviews/staff-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Reviews/staff.jpg">
+        <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/staff.jpg" alt="doctor" width="275" height="132">
+    </picture>
+</section>
+                 
+
+                                
+
+    {% include 'sections/map.html' %}
+{% endblock %}

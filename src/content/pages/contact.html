@@ -1,0 +1,124 @@
+---
+title: "Contact | Code Stitch Web Designs"
+description: "Meta description for the page"
+permalink: "/contact/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | avif %}"/>
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1014">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ffancy-divider.svg" alt="divider" width="181" height="36" aria-hidden="true">
+        </picture>
+        <span class="cs-int-title">Contact</span>
+        <p class="cs-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Ftable.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Ftable.jpg">
+        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Ftable.jpg" alt="breakfast" width="1920" height="1000">
+    </picture>
+</div> 
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-2147">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <!-- <span class="cs-topper">Contact Us</span> -->
+                <h2 class="cs-title">Come Find Us</h2>
+            </div>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+        <div class="cs-contact-info">
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <span class="cs-header">Location</span>
+                    <a href="" class="cs-link">8661 N Main St, Helen, GA 30545</a>
+                </li>
+                <li class="cs-li">
+                    <span class="cs-header">Phone</span>
+                    <a href="" class="cs-link">(706) 200-8045
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <span class="cs-header">Email</span>
+                    <a href="" class="cs-link">info@thecornercreperie.com</a>
+                </li>
+            </ul>
+        </div>
+        <!--Form-->
+        <div class="cs-form-wrapper">
+            <span class="cs-picture-title">Questions?</span>
+            <form class="cs-form" id="cs-form-2147-2147" name="Contact Form" method="post">
+                <div class="cs-form-content">
+                    <span class="cs-form-title">Fill out the form below</span>
+                </div>
+                <label class="cs-label">
+                    <input class="cs-input" required type="text" id="name-2147-2147" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label">
+                    <input class="cs-input" required type="email" id="email-2147-2147" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label">
+                    <input class="cs-input" type="number" id="phone-2147-2147" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    <select class="cs-select" name="class" id="classes-2147-2147" placeholder="Services">
+                        <option value="Service 1">Inquiry</option>
+                        <option value="Service 2">Suggestion</option>
+                        <option value="Service 3">Employment</option>
+                        <option value="Service 4">Other</option>
+                    </select>
+                </label>
+                <label class="cs-label cs-message">
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-2147-2147" placeholder="Message"></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Submit Message</button>
+            </form>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)"
+                    srcset="/assets/images/IMG_3556.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)"
+                    srcset="/assets/images/IMG_3556.jpeg">
+                <img loading="lazy" decoding="async"
+                    src="assets/images/IMG_3556.jpeg"
+                    alt="wedding rings" width="1280" height="576" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+    <!--Background-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/pattern-bg.png">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/pattern-bg.png">
+        <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/pattern-bg.png" alt="background" width="1920" height="1386" loading="lazy" decoding="async" aria-hidden="true">
+    </picture>
+</section>
+                                
+
+{% endblock %}
